@@ -14,10 +14,12 @@ useHead({
 </script>
 
 <template>
-  <div class="content text-black dark:text-white leading-[2rem]">
-    <h1 class="title" v-text="article.title" />
-    <ContentRenderer :value="article" class="main" />
-  </div>
+  <main class="flex items-center justify-center w-full">
+    <div class="content text-black dark:text-white leading-[2rem]">
+      <h1 class="title" v-text="article.title" />
+      <ContentRenderer :value="article" class="main" />
+    </div>
+  </main>
 </template>
 
 <style scoped>

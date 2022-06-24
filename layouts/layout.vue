@@ -10,7 +10,7 @@ useHead({
 <template>
   <main class="main">
     <Navbar />
-    <slot />
+      <slot />
   </main>
 </template>
 
