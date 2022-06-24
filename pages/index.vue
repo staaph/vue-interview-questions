@@ -8,16 +8,16 @@ useHead({
 </script>
 
 <template>
-  <main class="content flex flex-col justify-center items-center">
+  <main class="flex flex-col items-center justify-center content">
     <h1 class="title">
-      Discover fascinating stories
+      VueJS interview questions
     </h1>
-    <section v-if="articles" class="flex flex-col gap-5 w-full md:w-2/3">
+    <section v-if="articles" class="flex flex-col w-full gap-5 md:w-2/3">
       <div v-for="(article, key) in articles" :key="article.id">
         <NuxtLink :to="article._path">
           <div class="card">
             <div
-              class="font-bold text-3xl text-gray-400 dark:text-gray-400"
+              class="text-3xl font-bold text-gray-400 dark:text-gray-400"
               v-text="'0' + (key + 1)"
             />
             <div class="flex flex-col">

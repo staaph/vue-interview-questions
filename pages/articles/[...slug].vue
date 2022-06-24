@@ -8,12 +8,13 @@ const { data: article } = await useAsyncData(`article-${slug}`, () =>
 )
 
 useHead({
-  title: article.value.title
+  title: article.value.title,
+  description: article.value.description
 })
 </script>
 
 <template>
-  <div class="content text-black dark:text-white leading-[3rem]">
+  <div class="content text-black dark:text-white leading-[2rem]">
     <h1 class="title" v-text="article.title" />
     <ContentRenderer :value="article" class="main" />
   </div>
