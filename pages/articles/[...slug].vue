@@ -9,7 +9,7 @@ const { data: article } = await useAsyncData(`article-${slug}`, () =>
 
 useHead({
   title: article.value.title,
-  description: article.value.description
+  meta: [{ name: 'description', content: article.value.description }]
 })
 </script>
 

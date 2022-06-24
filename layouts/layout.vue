@@ -3,14 +3,14 @@ useHead({
   title: 'Vue interview questions',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
-  description: 'Common interview questions regarding Vue'
+  meta: [{ name: 'description', content: 'Common interview questions regarding Vue' }]
 })
 </script>
 
 <template>
   <main class="main">
     <Navbar />
-    <slot />
+      <slot />
   </main>
 </template>
 
