@@ -8,27 +8,36 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
+body{
+  @apply dark:bg-gray-900;
+}
 
 .title {
   @apply flex justify-center w-full mb-20 text-2xl font-bold text-black md:text-3xl dark:text-white;
 }
 .content {
-  @apply pb-12 mx-10 mt-10 md:mx-32;
+  @apply pb-12 mx-10 mt-10 overflow-auto md:mx-32;
 }
 
 pre {
   padding: 0.5rem;
   background-color: #1f2937;
   border-radius: 0.25rem;
-  @apply overflow-auto;
+  @apply w-full overflow-auto;
 }
 
 a {
   all: unset;
   cursor: pointer;
+  @apply text-blue-800
 }
 
 button {
   all: unset;
   cursor: pointer;
+}
+img{
+  @apply  max-h-[40rem] w-11/12 md:max-w-lg
+}
+p{
 }

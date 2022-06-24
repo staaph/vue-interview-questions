@@ -21,7 +21,7 @@ useHead({
               v-text="'0' + (key + 1)"
             />
             <div class="flex flex-col">
-              <p class="font-semibold" v-text="article.title" />
+              <p class="font-semibold text-black" v-text="article.title" />
             </div>
           </div>
         </NuxtLink>
