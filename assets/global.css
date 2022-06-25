@@ -9,7 +9,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  @apply dark:bg-gray-900;
+  @apply transition-all duration-1000 dark:bg-gray-900;
 }
 
 .title {

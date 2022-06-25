@@ -3,7 +3,9 @@ useHead({
   title: 'Vue interview questions',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
-  meta: [{ name: 'description', content: 'Common interview questions regarding Vue' }]
+  meta: [
+    { name: 'description', content: 'Common interview questions regarding Vue' }
+  ]
 })
 </script>
 
@@ -16,6 +18,6 @@ useHead({
 
 <style scoped>
 .main {
-  @apply  transition-all duration-1000 min-h-screen;
+  @apply min-h-screen;
 }
 </style>
