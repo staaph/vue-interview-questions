@@ -37,7 +37,7 @@ button {
   cursor: pointer;
 }
 img{
-  @apply  max-h-[40rem] w-11/12 md:max-w-lg
+  @apply  max-h-[50rem] w-11/12 md:max-w-lg
 }
 p{
   @apply leading-6 py-2 font-thin
