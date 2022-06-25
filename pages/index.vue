@@ -6,7 +6,10 @@ const { data: articles } = await useAsyncData('articles', () =>
 const layout = ref('list')
 
 useHead({
-  title: 'Home'
+  title: 'Home',
+  meta: [
+    { name: 'description', content: 'Common interview questions regarding Vue' }
+  ]
 })
 </script>
 
