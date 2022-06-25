@@ -28,7 +28,7 @@ useHead({
       class="w-full gap-5 md:w-2/3"
       :class="{
         'flex flex-col': layout == 'list',
-        'grid grid-cols-3': layout == 'grid'
+        'grid grid-cols-2 md:grid-cols-3': layout == 'grid'
       }"
     >
       <div v-for="(article, key) in articles" :key="article.id">
