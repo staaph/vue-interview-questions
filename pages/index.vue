@@ -36,7 +36,7 @@ useHead({
           <div class="card">
             <div
               class="text-3xl font-bold text-gray-400 dark:text-gray-400"
-              v-text="'0' + (key + 1)"
+              v-text="'00' + (key + 1)"
             />
             <div class="flex flex-col">
               <p class="font-semibold text-black">
