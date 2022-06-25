@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { layoutIs, setLayout } from '@/store/menuLayout'
+
 const { data: articles } = await useAsyncData('articles', () =>
   queryContent('/articles').find()
 )
-
-const layout = ref('list')
 
 useHead({
   title: 'Home',
@@ -19,19 +19,20 @@ useHead({
     <section
       class="flex flex-row justify-end w-full gap-2 mb-2 md:w-2/3 dark:text-white"
     >
-      <button @click="layout = 'list'">
+      <button @click="setLayout('list')">
         <IconsList />
       </button>
-      <button @click="layout = 'grid'">
+      <button @click="setLayout('grid')">
         <IconsGrid />
       </button>
     </section>
+    <!-- ARTICLES -->
     <section
       v-if="articles"
       class="w-full gap-5 md:w-2/3"
       :class="{
-        'flex flex-col': layout == 'list',
-        'grid grid-cols-2 lg:grid-cols-3': layout == 'grid'
+        'flex flex-col': layoutIs == 'list',
+        'grid grid-cols-2 lg:grid-cols-3': layoutIs == 'grid'
       }"
     >
       <div v-for="(article, key) in articles" :key="article.id">
