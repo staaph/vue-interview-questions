@@ -2,6 +2,9 @@
 const { data: articles } = await useAsyncData('articles', () =>
   queryContent('/articles').find()
 )
+
+const layout = ref('list')
+
 useHead({
   title: 'Home'
 })
@@ -9,10 +12,25 @@ useHead({
 
 <template>
   <main class="flex flex-col items-center justify-center content">
-    <h1 class="title">
-      VueJS interview questions
-    </h1>
-    <section v-if="articles" class="flex flex-col w-full gap-5 md:w-2/3">
+    <h1 class="title">VueJS interview questions</h1>
+    <section
+      class="flex flex-row justify-end w-full gap-2 mb-2 md:w-2/3 dark:text-white"
+    >
+      <button @click="layout = 'list'">
+        <IconsList />
+      </button>
+      <button @click="layout = 'grid'">
+        <IconsGrid />
+      </button>
+    </section>
+    <section
+      v-if="articles"
+      class="w-full gap-5 md:w-2/3"
+      :class="{
+        'flex flex-col': layout == 'list',
+        'grid grid-cols-3': layout == 'grid'
+      }"
+    >
       <div v-for="(article, key) in articles" :key="article.id">
         <NuxtLink :to="article._path">
           <div class="card">
