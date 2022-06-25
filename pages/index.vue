@@ -39,7 +39,9 @@ useHead({
               v-text="'0' + (key + 1)"
             />
             <div class="flex flex-col">
-              <p class="font-semibold text-black" v-text="article.title" />
+              <p class="font-semibold text-black">
+                {{ article.title.split(':').pop() }}
+              </p>
             </div>
           </div>
         </NuxtLink>
