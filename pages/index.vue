@@ -29,7 +29,7 @@ useHead({
     <!-- ARTICLES -->
     <section
       v-if="articles"
-      class="w-full gap-5 md:w-2/3"
+      class="w-full gap-8 md:w-2/3"
       :class="{
         'flex flex-col': layoutIs == 'list',
         'grid grid-cols-2 lg:grid-cols-3': layoutIs == 'grid'
@@ -43,7 +43,7 @@ useHead({
               v-text="'00' + (key + 1)"
             />
             <div class="flex flex-col">
-              <p class="font-semibold text-black">
+              <p class="font-semibold break-words">
                 {{ article.title.split(':').pop() }}
               </p>
             </div>
@@ -56,6 +56,6 @@ useHead({
 
 <style scoped>
 .card {
-  @apply dark:text-black dark:hover:text-white flex flex-row gap-x-3 bg-gray-100 p-2 rounded hover:scale-[103%] hover:bg-gray-900/25 transition-all duration-500 items-center dark:hover:bg-gray-600/50;
+  @apply text-black dark:hover:text-white flex flex-row gap-x-3 bg-gray-100 p-2 rounded hover:scale-[103%] hover:bg-gray-900/25 transition-all duration-500 items-center dark:hover:bg-gray-600/50 h-full;
 }
 </style>
